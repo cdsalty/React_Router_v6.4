@@ -9,7 +9,7 @@ const App = () => {
       <header>
         <nav>
           <h1>Job-A-Router</h1>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
           <NavLink to="about">ABOUT</NavLink>
         </nav>
       </header>
