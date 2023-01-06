@@ -7,9 +7,8 @@ import {
 // pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Faq from "./pages/help/faq";
-import Contact from "./pages/help/contact";
-
+import Faq from "./pages/help/Faq";
+import Contact from "./pages/help/Contact";
 // layouts
 import RootLayout from "./layouts/RootLayout";
 import HelpLayout from "./layouts/HelpLayout";
@@ -20,8 +19,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="help" elements={<HelpLayout />}>
-        {/* /help/faq */}
+      <Route path="help" element={<HelpLayout />}>
         <Route path="faq" element={<Faq />} />
         <Route path="contact" element={<Contact />} />
       </Route>
@@ -29,9 +27,9 @@ const router = createBrowserRouter(
   )
 );
 
-const App = () => {
+function App() {
   return <RouterProvider router={router} />;
-};
+}
 
 export default App;
 
