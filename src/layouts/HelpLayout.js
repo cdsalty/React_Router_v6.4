@@ -5,8 +5,7 @@ const HelpLayout = () => {
     <div className="help-layout">
       <h2>Website Help</h2>
       <p>
-        The world is beatiful. Why try to be different and make it ugly. Let's
-        make it even better!
+        The world is beatiful. Why try to make it ugly. Let's make it better!
       </p>
 
       <nav>

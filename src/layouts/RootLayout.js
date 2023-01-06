@@ -8,6 +8,7 @@ const RootLayout = () => {
           <h1>Job-A-Router</h1>
           <NavLink to="/">Home</NavLink>
           <NavLink to="about">ABOUT</NavLink>
+          <NavLink to="help">HELP</NavLink>
         </nav>
       </header>
       {/* The routes will be rendered below and they will always have the nav info above */}
