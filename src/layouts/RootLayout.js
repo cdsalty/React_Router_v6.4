@@ -9,6 +9,7 @@ const RootLayout = () => {
           <NavLink to="/">Home</NavLink>
           <NavLink to="about">ABOUT</NavLink>
           <NavLink to="help">HELP</NavLink>
+          <NavLink to="careers">CAREERS</NavLink>
         </nav>
       </header>
       {/* The routes will be rendered below and they will always have the nav info above */}
