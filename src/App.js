@@ -4,6 +4,10 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+// layouts
+import RootLayout from "./layouts/RootLayout";
+import HelpLayout from "./layouts/HelpLayout";
+import CareerLayout from "./layouts/CareerLayout";
 // pages
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -11,10 +15,9 @@ import Faq from "./pages/help/Faq";
 import Contact from "./pages/help/Contact";
 import NotFound from "./pages/NotFound";
 import Careers, { careersLoader } from "./pages/careers/Careers";
-// layouts
-import RootLayout from "./layouts/RootLayout";
-import HelpLayout from "./layouts/HelpLayout";
-import CareerLayout from "./layouts/CareerLayout";
+import CareerDetails, {
+  careerDetailsLoader,
+} from "./pages/careers/CareerDetails";
 
 // Need to tell where we want these page components when we go to different paths
 const router = createBrowserRouter(
@@ -29,6 +32,12 @@ const router = createBrowserRouter(
       {/* CareerLayout is just the layout. The data that will appear will come from careers */}
       <Route path="careers" element={<CareerLayout />}>
         <Route index loader={careersLoader} element={<Careers />} />
+        {/* The path "id" will have to match up to the params it's being called from. See CareerDetails.js */}
+        <Route
+          path=":id"
+          loader={careerDetailsLoader}
+          element={<CareerDetails />}
+        />
       </Route>
       {/* Catch route; will use ErrorElements later */}
       <Route path="*" element={<NotFound />} />

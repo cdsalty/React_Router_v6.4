@@ -8,6 +8,7 @@ export default function CareerLayout() {
         The lorem of careers. Unlock your potential and see your new future
         today.
       </p>
+      <p>All of this and above is coming from the "CarrerLayout" component</p>
       {/* The outlet will be where any nested route pages inside the career layouts route are */}
       <Outlet />
     </div>
